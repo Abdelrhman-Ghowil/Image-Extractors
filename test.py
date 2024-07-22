@@ -34,7 +34,7 @@ def rename_images_based_on_sheet(file_path, output_dir):
     
     # Rename images based on the names in the Excel sheet
     for idx, row in excel_data.iterrows():
-        name = row['Name']
+        name = row[' name']
         if pd.notna(name):
             old_image_path = os.path.join(output_dir, f"{idx + 1}.jpeg")
             new_image_path = os.path.join(output_dir, f"{name}.jpeg")
